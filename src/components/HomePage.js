@@ -30,11 +30,6 @@ const HomePage = () => {
     }
 
     return (
-        <div>
-            <div>
-                <p style={{ paddingLeft: '25px' }}>Social Media App</p>
-                <hr />
-            </div>
             <div style={{ display: 'grid', gridTemplateColumns: '22vw 22vw 22vw 22vw', gap: '2vw', marginTop: '20px', marginLeft: '2vw', marginBottom: '20px' }}>
                 {
                     posts.map((post, index) => (
@@ -49,7 +44,6 @@ const HomePage = () => {
                     ))
                 }
             </div>
-        </div>
     )
 }
 
