@@ -3,3 +3,31 @@
     background-color: black;
     color: white;
 }
+
+.grid{
+    display: grid;
+    grid-template-columns: 22vw 22vw 22vw 22vw;
+    gap: 2vw;
+    margin-top: 20px;
+    margin-left: 2vw;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+    .grid{
+        grid-template-columns: 30vw 30vw 30vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .grid{
+        grid-template-columns: 46vw 46vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .grid{
+        grid-template-columns: 94vw;
+    }
+}
+

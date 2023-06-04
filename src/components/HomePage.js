@@ -3,6 +3,7 @@ import { fetchData } from '../redux/actions/apiActionCreator'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../App.css'
 
 
 const HomePage = () => {
@@ -30,15 +31,15 @@ const HomePage = () => {
     }
 
     return (
-            <div style={{ display: 'grid', gridTemplateColumns: '22vw 22vw 22vw 22vw', gap: '2vw', marginTop: '20px', marginLeft: '2vw', marginBottom: '20px' }}>
+            <div className='grid'>
                 {
                     posts.map((post, index) => (
                         <div key={index} onClick={() => showDetails(post)} style={{ border: '1px solid white', borderRadius: '15px' }}>
                             <img src={`https://picsum.photos/200?random=${post.id}`} style={{ width: '100%', borderTopLeftRadius: '15px', borderTopRightRadius: '15px' }} />
                             <div style={{ paddingLeft: '10px', paddingRight: '10px' }}>
-                                <h5 style={{ fontSize: '1.3vw' }}>User ID : {post.id}</h5>
-                                <h5 style={{ fontSize: '1.3vw' }}>Title : {post.title.slice(0, 16)}...</h5>
-                                <p style={{ fontSize: '1.3vw' }}><b>Body :</b> {post.body.slice(0, 70)} <b>Read More...</b></p>
+                                <h5 style={{ fontSize: '15px' }}>User ID : {post.id}</h5>
+                                <h5 style={{ fontSize: '15px' }}>Title : {post.title.slice(0, 16)}...</h5>
+                                <p style={{ fontSize: '15px' }}><b>Body :</b> {post.body.slice(0, 70)} <b>Read More...</b></p>
                             </div>
                         </div>
                     ))
